@@ -1,11 +1,14 @@
 const mongoose = require("mongoose");
 mongoose.set("strictQuery", false);
 mongoose
-  .connect("mongodb://localhost:27017/students-api", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    // useFindAndModifiy: false,
-  })
+  .connect(
+    "mongodb+srv://vrundshah:tJNozS0DphpNMewu@social.9i2szzh.mongodb.net/students-api?retryWrites=true&w=majority",
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      // useFindAndModifiy: false,
+    }
+  )
   .then(() => {
     console.log("connection established!");
   })
